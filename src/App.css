@@ -1,14 +1,28 @@
 .App {
   text-align: center;
+  border: solid;
+  border-style:dashed;
+  border-color: coral;
+  border-width: 2px;
+  border-radius: 30px;
 }
 
 body {
   padding: 30px;
-  background-color: #7aa1c9;
+  background-color: #96a2af;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   color: white;
 }
 
+@font-face {
+  font-family: 'Aurebesh';
+  src: URL('./Fonts/aurebesh/Aurebesh.ttf') format('truetype');
+}
+
+h1{
+  text-align: left;
+  font-family: Aurebesh;
+}
 h1,h2,h3,
 h4,h5,p {
   margin: 0;
@@ -27,8 +41,14 @@ hr {
   height: 400px;
   width: 400px;
   border: solid;
-  border-style: groove;
+  border-style:dashed;
   border-color: coral;
   border-width: 2px;
   border-radius: 30px;
+}
+
+.gamingGrid div{
+  width: 100px;
+  height: 100px;
+  background-color: darkgoldenrod;
 }
