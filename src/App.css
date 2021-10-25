@@ -1,3 +1,6 @@
+
+
+
 .App {
   text-align: center;
   border: solid;
@@ -12,6 +15,9 @@ body {
   background-color: #96a2af;
   font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
   color: white;
+  display: flex;
+  justify-content: center;
+
 }
 
 @font-face {
@@ -40,26 +46,37 @@ hr {
   background-color: #cacaca;
 }
 
-.gamingGrid {
+.gaming-Grid {
   display: flex;
   flex-wrap: wrap;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
   height: 400px;
   width: 400px;
   border: solid;
   border-style:dashed;
-  border-color: coral;
-  border-width: 2px;
-  border-radius: 30px;
+  border-color: rgb(73, 0, 80);
+  border-width: 3px;
+  border-radius: 10px;
 }
 
 .gaming-Grid div{
-  width: 100px;
-  height: 100px;
+  width: 95px;
+  height: 95px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: darkgoldenrod;
   font-family: Aurebesh;
+  font-size: 25px;
   border: solid;
   border-style:dashed;
   border-color: coral;
   border-width: 2px;
-  border-radius: 30px;
+  border-radius: 10px;
+}
+
+button{
+  font-family: Aurebesh;
 }

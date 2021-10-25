@@ -6,18 +6,17 @@ let gameSquares = [];
 let activeScore = 0;
 
 function App() {
-  
   // const leaderBoard;
 
   const createBoard = () => {
-    let gRow= [];
+    let gRow = [];
     for (let i = 0; i < bWidth * bWidth; i++) {
-      let gSquare = document.createElement("div")
+      let gSquare = document.createElement("div");
       gRow.push(<div className="game-Square">0</div>);
     }
-    return(gRow);
+    return gRow;
   };
-
+  console.log(gameSquares);
 
   return (
     <div className="App">
@@ -28,7 +27,9 @@ function App() {
         <span id="score">{activeScore}</span>
       </div>
 
-      <div class="gaming-Grid">{createBoard()};</div>
+      <div class="gaming-Grid">{createBoard()}</div>
+      <button>Leaderboards</button>
+      <button>How to</button>
     </div>
   );
 }
