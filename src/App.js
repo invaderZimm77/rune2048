@@ -1,21 +1,34 @@
 import "./App.css";
 
+const gGrid = document.querySelector(".gaming-Grid");
+const bWidth = 4;
+let gameSquares = [];
+let activeScore = 0;
+
 function App() {
-  let activeScore = 0;
+  
   // const leaderBoard;
+
+  const createBoard = () => {
+    let gRow= [];
+    for (let i = 0; i < bWidth * bWidth; i++) {
+      let gSquare = document.createElement("div")
+      gRow.push(<div className="game-Square">0</div>);
+    }
+    return(gRow);
+  };
+
 
   return (
     <div className="App">
       <h1>2048</h1>
-      
+
       <div class="score-Continer">
         <div class="score-Title">Score:</div>
         <span id="score">{activeScore}</span>
       </div>
 
-      <div class="gamingGrid">
-
-      </div>
+      <div class="gaming-Grid">{createBoard()};</div>
     </div>
   );
 }

@@ -19,9 +19,14 @@ body {
   src: URL('./Fonts/aurebesh/Aurebesh.ttf') format('truetype');
 }
 
-h1{
+h1 {
   text-align: left;
   font-family: Aurebesh;
+}
+
+.score-Title{
+  font-family: Aurebesh;
+  font-size: 30px;
 }
 h1,h2,h3,
 h4,h5,p {
@@ -47,8 +52,14 @@ hr {
   border-radius: 30px;
 }
 
-.gamingGrid div{
+.gaming-Grid div{
   width: 100px;
   height: 100px;
   background-color: darkgoldenrod;
+  font-family: Aurebesh;
+  border: solid;
+  border-style:dashed;
+  border-color: coral;
+  border-width: 2px;
+  border-radius: 30px;
 }
