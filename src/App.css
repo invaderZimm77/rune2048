@@ -28,10 +28,23 @@ body {
   src: URL('./Fonts/aurebesh/Aurebesh.ttf') format('truetype');
   
 }
-h1,button,.score-Title:hover {
-  font-family: 'DotGothic16', sans-serif;
+@font-face {
+  font-family: 'DotGothic16' ;
   src: url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 }
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` */
+
+h1,:hover {
+  font-family: 'DotGothic16', sans-serif;
+}
+button:hover{
+  font-family:'DotGothic16', sans-serif; ;
+}
+.score-Title:hover{
+  font-family:'DotGothic16', sans-serif; ;
+}
+
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` */
 h1 {
   text-align: left;
   font-family: Aurebesh;
