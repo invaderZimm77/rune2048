@@ -3,7 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 
 
-const bWidth = 4;
+const bWidth = 2;
 let activeScore = 0;
 
 function App() {
@@ -11,13 +11,13 @@ function App() {
   const [gameSquareValue, setGameSquareValue] = useState(null);
   const [gameSquarePosition, setGameSquarePosition] = useState(null);
   
-  const makeGameSquare =(squaresNum ) => {
-    // props.setGameSquareValue(0);
-    // props.setGameSquarePosition={squaresNum}; 
-  setGameSquareValue(0);
-  setGameSquarePosition={squaresNum}; 
-    return();
-  };
+  // const makeGameSquare =(squaresNum ) => {
+  //   // props.setGameSquareValue(0);
+  //   // props.setGameSquarePosition={squaresNum}; 
+  // setGameSquareValue(0);
+  // setGameSquarePosition={squaresNum}; 
+  //   return();
+  // };
 
   const createBoard = () => {
     let gameSquares = [];
@@ -25,8 +25,8 @@ function App() {
     // console.log(bWidth*bWidth);
     for (let i = 0; i < bWidth * bWidth; i++) {
       
-      // gameSquares.push(<div className="game-Square">{i}</div>);
-      gameSquares.push(<makeGameSquare className="game-Square">{}</makeGameSquare>);
+      gameSquares.push(<div className="game-Square">{i}</div>);
+      // gameSquares.push(<makeGameSquare className="game-Square">{}</makeGameSquare>);
       //conditional
       // console.log(i);
     }
