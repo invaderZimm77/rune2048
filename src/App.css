@@ -12,8 +12,8 @@
   src: url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 }
 @font-face {
-  font-family: ;
-  src: url();
+  font-family: 'AurebeshAF-LegendsTech';
+  src: url('./Fonts/AurebeshAF-LegendsTech.otf');
 }
 .App {
   text-align: center;
@@ -27,7 +27,7 @@
 body {
   padding: 30px;
   background-color: #96a2af;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; */
   color: white;
   display: flex;
   justify-content: center;
@@ -37,8 +37,8 @@ body {
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` */
 
-/* h1,:hover {
-  font-family: 'DotGothic16', sans-serif;
+h1,:hover {
+  font-family: 'AurebeshAF-LegendsTech', sans-serif;
   font-size: 35px;
 }
 button:hover{
@@ -47,7 +47,7 @@ button:hover{
 .score-Title:hover{
   font-family:'DotGothic16', sans-serif; 
   font-size: 30px;
-} */
+}
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` */
 h1 {
