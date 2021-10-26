@@ -1,4 +1,6 @@
-
+:root{
+ --baseSquareColor: #1e2432;
+}
 
 
 .App {
@@ -23,8 +25,12 @@ body {
 @font-face {
   font-family: 'Aurebesh';
   src: URL('./Fonts/aurebesh/Aurebesh.ttf') format('truetype');
+  
 }
-
+@font-face: hover {
+  font-family: 'arial';
+  /* src: url();*/
+}
 h1 {
   text-align: left;
   font-family: Aurebesh;
@@ -67,7 +73,7 @@ hr {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: darkgoldenrod;
+  background-color: var(--baseSquareColor);
   font-family: Aurebesh;
   font-size: 25px;
   border: solid;

@@ -2,29 +2,35 @@ import "./App.css";
 import axios from "axios";
 import { useState } from "react";
 
-const [GameSquareValue, SetGameSquareValue] = useState(null);
-const [GameSquarePosition, SetGameSquarePosition] = useState(null);
 
 const bWidth = 4;
-let gameSquares = [];
 let activeScore = 0;
 
 function App() {
   // const leaderBoard;
+  const [GameSquareValue, SetGameSquareValue] = useState(null);
+  const [GameSquarePosition, SetGameSquarePosition] = useState(null);
 
+  
   const createBoard = () => {
+    let gameSquares = [];
     // let gRow = [];
-    for (let i = 0; i < bWidth + bWidth; i++) {
+    console.log(bWidth*bWidth);
+    for (let i = 0; i < bWidth * bWidth; i++) {
       
-      gameSquares.push(<div className="game-Square">0</div>);
-      // gameSquares.push(
-      //   // <makeGameSquare className="game-Square">{}</makeGameSquare>
-        
-      // );
+      // gameSquares.push(<div className="game-Square">{i}</div>);
+      gameSquares.push(<MakeGameSquare className="game-Square">{"passItSelf"}</MakeGameSquare>);
+      console.log(i);
     }
+    
     return gameSquares;
   };
+  const MakeGameSquare =(squaresNum, {props} ) => {
 
+    props.setGameSquareValue(0);
+    props.setGameSquarePosition={squaresNum}; 
+    return(props);
+  };
 
   // const generate = () => {
   //   let randomSquare = Math.floor(Math.random() * gameSquares.length);
@@ -55,8 +61,6 @@ function App() {
     </div>
   );
 }
-const makeGameSquare =({}) =>{
-  setGameSquareValue(0);
-  
-}
+
+
 export default App;
