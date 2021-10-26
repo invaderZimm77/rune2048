@@ -10,7 +10,6 @@ function App() {
   // const leaderBoard;
   const [GameSquareValue, SetGameSquareValue] = useState(null);
   const [GameSquarePosition, SetGameSquarePosition] = useState(null);
-
   
   const createBoard = () => {
     let gameSquares = [];
@@ -19,7 +18,7 @@ function App() {
     for (let i = 0; i < bWidth * bWidth; i++) {
       
       // gameSquares.push(<div className="game-Square">{i}</div>);
-      gameSquares.push(<MakeGameSquare className="game-Square">{"passItSelf"}</MakeGameSquare>);
+      // gameSquares.push(<MakeGameSquare className="game-Square">{"passItSelf"}</MakeGameSquare>);
       console.log(i);
     }
     

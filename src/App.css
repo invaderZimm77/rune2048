@@ -1,5 +1,6 @@
 :root{
  --baseSquareColor: #1e2432;
+
 }
 
 
@@ -27,9 +28,9 @@ body {
   src: URL('./Fonts/aurebesh/Aurebesh.ttf') format('truetype');
   
 }
-@font-face: hover {
-  font-family: 'arial';
-  /* src: url();*/
+h1,button,.score-Title:hover {
+  font-family: 'DotGothic16', sans-serif;
+  src: url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 }
 h1 {
   text-align: left;
