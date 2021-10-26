@@ -8,28 +8,32 @@ let activeScore = 0;
 
 function App() {
   // const leaderBoard;
-  const [GameSquareValue, SetGameSquareValue] = useState(null);
-  const [GameSquarePosition, SetGameSquarePosition] = useState(null);
+  const [gameSquareValue, setGameSquareValue] = useState(null);
+  const [gameSquarePosition, setGameSquarePosition] = useState(null);
   
+  const makeGameSquare =(squaresNum ) => {
+    // props.setGameSquareValue(0);
+    // props.setGameSquarePosition={squaresNum}; 
+  setGameSquareValue(0);
+  setGameSquarePosition={squaresNum}; 
+    return();
+  };
+
   const createBoard = () => {
     let gameSquares = [];
     // let gRow = [];
-    console.log(bWidth*bWidth);
+    // console.log(bWidth*bWidth);
     for (let i = 0; i < bWidth * bWidth; i++) {
       
       // gameSquares.push(<div className="game-Square">{i}</div>);
-      // gameSquares.push(<MakeGameSquare className="game-Square">{"passItSelf"}</MakeGameSquare>);
-      console.log(i);
+      gameSquares.push(<makeGameSquare className="game-Square">{}</makeGameSquare>);
+      //conditional
+      // console.log(i);
     }
     
     return gameSquares;
   };
-  const MakeGameSquare =(squaresNum, {props} ) => {
 
-    props.setGameSquareValue(0);
-    props.setGameSquarePosition={squaresNum}; 
-    return(props);
-  };
 
   // const generate = () => {
   //   let randomSquare = Math.floor(Math.random() * gameSquares.length);
@@ -49,12 +53,12 @@ function App() {
     <div className="App">
       <h1>2048</h1>
 
-      <div class="score-Continer">
-        <div class="score-Title">Score:</div>
+      <div className="score-Continer">
+        <div className="score-Title">Score:</div>
         <span id="score">{activeScore}</span>
       </div>
 
-      <div class="gaming-Grid">{createBoard()}</div>
+      <div className="gaming-Grid">{createBoard()}</div>
       <button>Leaderboards</button>
       <button>How to</button>
     </div>

@@ -1,16 +1,27 @@
 :root{
- --baseSquareColor: #1e2432;
-
+ --baseSquareColor: #2d1e32;
+ --squareFontColor: #ce007f;
 }
-
-
+@font-face {
+  font-family: 'Aurebesh';
+  src: URL('./Fonts/aurebesh/Aurebesh.ttf') format('truetype');
+  
+}
+@font-face {
+  font-family: 'DotGothic16' ;
+  src: url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+}
+@font-face {
+  font-family: ;
+  src: url();
+}
 .App {
   text-align: center;
   border: solid;
   border-style:dashed;
   border-color: coral;
   border-width: 2px;
-  border-radius: 30px;
+  border-radius: 10px;
 }
 
 body {
@@ -23,26 +34,20 @@ body {
 
 }
 
-@font-face {
-  font-family: 'Aurebesh';
-  src: URL('./Fonts/aurebesh/Aurebesh.ttf') format('truetype');
-  
-}
-@font-face {
-  font-family: 'DotGothic16' ;
-  src: url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
-}
+
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` */
 
-h1,:hover {
+/* h1,:hover {
   font-family: 'DotGothic16', sans-serif;
+  font-size: 35px;
 }
 button:hover{
-  font-family:'DotGothic16', sans-serif; ;
+  font-family:'DotGothic16', sans-serif; 
 }
 .score-Title:hover{
-  font-family:'DotGothic16', sans-serif; ;
-}
+  font-family:'DotGothic16', sans-serif; 
+  font-size: 30px;
+} */
 
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` */
 h1 {
