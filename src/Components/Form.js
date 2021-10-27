@@ -29,7 +29,7 @@ const Form = ({ formType, toggleFetch, setToggleFetch }) => {
           fields: {
             playerName,
             ingredients: gameName,
-            steps: score
+            steps: score,
           },
         },
       ],
@@ -52,7 +52,7 @@ const Form = ({ formType, toggleFetch, setToggleFetch }) => {
           fields: {
             title: playerName,
             ingredients: gameName,
-            steps: score
+            steps: score,
           },
         },
       ],
@@ -79,7 +79,7 @@ const Form = ({ formType, toggleFetch, setToggleFetch }) => {
           id="playerName"
           onChange={(ev) => setPlayerName(ev.target.value)}
         />
-<br/>
+        <br />
         <label htmlFor="gameName">Name of the Game: </label>
         <input
           type="text"
@@ -93,8 +93,8 @@ const Form = ({ formType, toggleFetch, setToggleFetch }) => {
           id="score"
           onChange={(ev) => secScore(ev.target.value)}
         />
-<br/>
-        <input className="buttonSUB" type="submit" />
+        <br />
+        <input className="submit-Button" type="submit" />
       </form>
     </div>
   );

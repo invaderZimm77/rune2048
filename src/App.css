@@ -1,6 +1,7 @@
 :root{
  --baseSquareColor: #2d1e32;
  --squareFontColor: #ce007f;
+ 
 }
 @font-face {
   font-family: 'Aurebesh';
@@ -19,6 +20,7 @@
   src: url('./Fonts/AurebeshAF-LegendsTech.otf');
 }
 .App {
+  font-family: 'DotGothic16';
   text-align: center;
   border: solid;
   border-style:dashed;
@@ -30,6 +32,7 @@
 body {
   padding: 30px;
   background-color: #96a2af;
+  font-family: 'DotGothic16';
   /* font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; 
   color: white;*/
   display: flex;
@@ -38,34 +41,41 @@ body {
 }
 
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` */
+/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` 
 
-h1,:hover {
+h1:hover {
   font-family: 'AurebeshAF-LegendsTech', sans-serif;
   font-size: 35px;
 }
-.buttonSUB:hover{
+nav:hover{
   font-family:'AurebeshCalligraphy', sans-serif; 
 }
-.score-Title:hover{
+.home-Button:hover{
   font-family:'DotGothic16', sans-serif; 
   font-size: 30px;
 }
 
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` */
-h1 {
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` */
+.home-Button {
   text-align: left;
   font-family: Aurebesh;
 }
 
-:any-link {
-  font-family: Aurebesh;
+.submit-Button{
+  font-family: 'AurebeshCalligraphy-Regular';
   font-size: 30px;
 }
+
+/* 
+label {
+  font-family: Aurebesh;
+  font-size: 30px;
+} */
 h1,h2,h3,
 h4,h5,p {
   margin: 0;
 }
+
 
 hr {
   height: 1px;
@@ -105,6 +115,6 @@ hr {
   border-radius: 10px;
 }
 
-inputType {
+button {
   font-family: Aurebesh;
 }

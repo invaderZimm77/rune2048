@@ -1,5 +1,5 @@
 import axios from "axios";
-
+import'./App.css';
 import { useEffect, useState } from "react";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import BlogPost from "./Components/BlogPost.js";
@@ -12,46 +12,46 @@ const API_URL =
   "https://api.airtable.com/v0/appdAL6fkiTWC0Z3m/Table%201?api_key=keyaPGQk6v48Ci0cw";
 
 function App() {
-  const [blogPosts, setBlogPosts] = useState([]);
+  const [gamePosts, setGamePosts] = useState([]);
   const [toggleFetch, setToggleFetch] = useState(true);
 
   useEffect(() => {
-    console.log("Getting Blog Posts");
+    console.log("Retreving Server Data...");
 
-    const getBlogPosts = async () => {
+    const getGamePosts = async () => {
       const resp = await axios.get(API_URL);
       console.log(resp.data);
-      setBlogPosts(resp.data.records);
+      setGamePosts(resp.data.records);
     };
 
-    getBlogPosts();
+    getGamePosts();
   }, [toggleFetch]);
 
   return (
     <Router>
       <div>
         <nav>
-          <Link to="/">Home</Link>
+          <Link to="/" className="home-Button">Home</Link>
           <br />
-          <Link to="/newpost">Add a Recipe</Link>
+          <Link to="/newpost">Add a Game</Link>
         </nav>
         <br />
 
         <Route exact path="/">
           <ul>
-            {blogPosts.map((blogPosts) => (
-              <Link to={`/recipe/${blogPosts.id}`} key={blogPosts.id}>
-                <li >{blogPosts.fields.title}</li>
+            {gamePosts.map((gamePosts) => (
+              <Link to={`/recipe/${gamePosts.id}`} key={gamePosts.id}>
+                <li >{gamePosts.fields.title}</li>
               </Link>
             ))}
           </ul>
 
         </Route>
-        {blogPosts.map((blogPosts) => (
-          <Route exact path={`/recipe/${blogPosts.id}`} key={blogPosts.id}>
+        {gamePosts.map((gamePosts) => (
+          <Route exact path={`/recipe/${gamePosts.id}`} key={gamePosts.id}>
             <BlogPost
-              key={blogPosts.id}
-              postData={blogPosts}
+              key={gamePosts.id}
+              postData={gamePosts}
               toggleFetch={toggleFetch}
               setToggleFetch={setToggleFetch}
             />
