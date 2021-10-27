@@ -12,9 +12,9 @@ const GamePost = ({ postData, toggleFetch, setToggleFetch }) => {
 
   return (
     <div>
-      <h2>{postData.fields.title}</h2>
-      <p>Ingredients: {postData.fields.ingredients}</p>
-      <em>Steps: {postData.fields.score}</em>
+      <h2>{postData.fields.PlayerName}</h2>
+      <p>Name of the game: {postData.fields.GameName}</p>
+      <p>Game score: {postData.fields.GameScore}</p>
       <br />
       <button onClick={deleteGamePost}>Delete</button>
     </div>

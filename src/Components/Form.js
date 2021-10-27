@@ -28,8 +28,8 @@ const Form = ({ formType, toggleFetch, setToggleFetch }) => {
         {
           fields: {
             playerName,
-            ingredients: gameName,
-            steps: score,
+            gameName,
+            score,
           },
         },
       ],
@@ -50,9 +50,9 @@ const Form = ({ formType, toggleFetch, setToggleFetch }) => {
         {
           id: blog_id,
           fields: {
-            title: playerName,
-            ingredients: gameName,
-            steps: score,
+            playerName,
+            gameName,
+            score,
           },
         },
       ],

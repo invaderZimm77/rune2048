@@ -3,22 +3,26 @@
  --squareFontColor: #ce007f;
  
 }
-@font-face {
-  font-family: 'Aurebesh';
-  src: url('./Fonts/aurebesh/Aurebesh.ttf') format('truetype');
-}
-@font-face{
-  font-family: 'AurebeshCalligraphy-Regular';
-  src: url('./Fonts/AurebeshCalligraphy-Regular.ttf');
-}
+
 @font-face {
   font-family: 'DotGothic16' ;
   src: url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 }
+
+@font-face {
+  font-family: 'Aurebesh';
+  src: url('./Fonts/aurebesh/Aurebesh.ttf') format('truetype');
+}
+/*
+@font-face{
+  font-family: 'AurebeshCalligraphy-Regular';
+  src: url('./Fonts/AurebeshCalligraphy-Regular.ttf');
+}
+
 @font-face {
   font-family: 'AurebeshAF-LegendsTech';
   src: url('./Fonts/AurebeshAF-LegendsTech.otf');
-}
+} */
 .App {
   font-family: 'DotGothic16';
   text-align: center;
@@ -47,7 +51,7 @@ h1:hover {
   font-family: 'AurebeshAF-LegendsTech', sans-serif;
   font-size: 35px;
 }
-nav:hover{
+nav:hover {
   font-family:'AurebeshCalligraphy', sans-serif; 
 }
 .home-Button:hover{
@@ -58,21 +62,24 @@ nav:hover{
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` */
 .home-Button {
   text-align: left;
-  font-family: Aurebesh;
+  font-family: 'DotGothic16';
+  /* font-family: Aurebesh; */
 }
 
 .submit-Button{
-  font-family: 'AurebeshCalligraphy-Regular';
+  /* font-family: 'AurebeshCalligraphy-Regular'; */
+  font-family: 'DotGothic16';
   font-size: 30px;
 }
 
 
 label {
-  font-family: 'AurebeshCalligraphy-Regular';
+  /* font-family: 'AurebeshCalligraphy-Regular'; */
+  font-family: 'DotGothic16';
   font-size: 30px;
 }
 
-h1,h2,h3,
+/* h1,h2,h3,
 h4,h5,p {
   margin: 0;
 }
@@ -83,7 +90,7 @@ hr {
   margin: 30px 0;
   border: none;
   background-color: #cacaca;
-}
+} */
 
 .gaming-Grid {
   display: flex;
@@ -100,15 +107,16 @@ hr {
   border-radius: 10px;
 }
 
-.gaming-Grid div{
-  width: 95px;
-  height: 95px;
+a {
+
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: var(--baseSquareColor);
-  font-family: Aurebesh;
+  /* font-family: Aurebesh; */
+  font-family: 'DotGothic16';
   font-size: 25px;
+  padding: auto;
   border: solid;
   border-style:dashed;
   border-color: coral;
@@ -116,6 +124,11 @@ hr {
   border-radius: 10px;
 }
 
-button {
-  font-family: Aurebesh;
+li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--baseSquareColor);
+  /* font-family: Aurebesh; */
+  font-family: 'DotGothic16';
 }

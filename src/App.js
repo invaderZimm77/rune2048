@@ -5,9 +5,6 @@ import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import GamePost from "./Components/GamePost.js";
 import Form from "./Components/Form.js"
 
-
-const apiKEy= "keyzOz9iJrfKlIX63";
-
 const API_URL =
   "https://api.airtable.com/v0/appT75kZsb3WTw7pA/Table%201?api_key=keyzOz9iJrfKlIX63";
 
@@ -19,9 +16,9 @@ function App() {
     console.log("Retreving Server Data...");
 
     const getGamePosts = async () => {
-      const resp = await axios.get(API_URL);
-      console.log(resp.data);
-      setGamePosts(resp.data.records);
+      const gameP = await axios.get(API_URL);
+      console.log(gameP.data);
+      setGamePosts(gameP.data.records);
     };
 
     getGamePosts();
@@ -40,8 +37,8 @@ function App() {
         <Route exact path="/">
           <ul>
             {gamePosts.map((gamePosts) => (
-              <Link to={`/recipe/${gamePosts.id}`} key={gamePosts.id}>
-                <li >{gamePosts.fields.title}</li>
+              <Link to={`/gamePosts/${gamePosts.id}`} key={gamePosts.id}>
+                <li >{gamePosts.fields.PlayerName}</li>
               </Link>
             ))}
           </ul>
