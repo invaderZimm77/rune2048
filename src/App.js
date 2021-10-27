@@ -1,6 +1,6 @@
 import "./App.css";
-import axios from "axios";
-import { useState } from "react";
+// import axios from "axios";
+// import { useState } from "react";
 // import GameSquare from "./Components/GameSquare";
 
 
@@ -9,8 +9,8 @@ let activeScore = 0;
 
 function App() {
   // const leaderBoard;
-  const [gameSquareValue, setGameSquareValue] = useState(null);
-  const [gameSquarePosition, setGameSquarePosition] = useState(null);
+  // const [gameSquareValue, setGameSquareValue] = useState(null);
+  // const [gameSquarePosition, setGameSquarePosition] = useState(null);
   
 
   const createBoard = () => {
@@ -20,28 +20,13 @@ function App() {
     for (let i = 0; i < bWidth * bWidth; i++) {
       
       gameSquares.push(<div className="game-Square">{i}</div>);
-      // gameSquares.push(<GameSquare gameSquare={gameSquareValue} />);
-      // conditional
+
       console.log(i);
     }
     
     return gameSquares;
   };
 
-
-  // const generate = () => {
-  //   let randomSquare = Math.floor(Math.random() * gameSquares.length);
-  //   for (let x = 0; x <= gameSquares.length; x++) {
-  //     /* 
-  //   if(gameSquares.content == 0 )
-  //         put randomly either 2or4 in
-  //       break
-  //   */
-  //     console.log(gameSquares[x]);
-  //   }
-  // };
-
-  // console.log(gameSquares);
 
   return (
     <div className="App">
