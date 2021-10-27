@@ -1,48 +1,70 @@
-import "./App.css";
-// import axios from "axios";
-// import { useState } from "react";
-// import GameSquare from "./Components/GameSquare";
+import axios from "axios";
 
+import { useEffect, useState } from "react";
+import { Route, Link, BrowserRouter as Router } from "react-router-dom";
+import BlogPost from "./components/BlogPost.js";
+import 
 
-const bWidth = 2;
-let activeScore = 0;
+const API_URL =
+  "https://api.airtable.com/v0/appdAL6fkiTWC0Z3m/Table%201?api_key=keyaPGQk6v48Ci0cw";
 
 function App() {
-  // const leaderBoard;
-  // const [gameSquareValue, setGameSquareValue] = useState(null);
-  // const [gameSquarePosition, setGameSquarePosition] = useState(null);
-  
+  const [blogPosts, setBlogPosts] = useState([]);
+  const [toggleFetch, setToggleFetch] = useState(true);
 
-  const createBoard = () => {
-    let gameSquares = [];
-    // let gRow = [];
-    // console.log(bWidth*bWidth);
-    for (let i = 0; i < bWidth * bWidth; i++) {
-      
-      gameSquares.push(<div className="game-Square">{i}</div>);
+  useEffect(() => {
+    console.log("Getting Blog Posts");
 
-      console.log(i);
-    }
-    
-    return gameSquares;
-  };
+    const getBlogPosts = async () => {
+      const resp = await axios.get(API_URL);
+      console.log(resp.data);
+      setBlogPosts(resp.data.records);
+    };
 
+    getBlogPosts();
+  }, [toggleFetch]);
 
   return (
-    <div className="App">
-      <h1>2048</h1>
+    <Router>
+      <div>
+        <nav>
+          <Link to="/">Home</Link>
+          <br />
+          <Link to="/newpost">Add a Recipe</Link>
+        </nav>
+        <br />
 
-      <div className="score-Continer">
-        <div className="score-Title">Score:</div>
-        <span id="score">{activeScore}</span>
+        <Route exact path="/">
+          <ul>
+            {blogPosts.map((blogPosts) => (
+              <Link to={`/recipe/${blogPosts.id}`} key={blogPosts.id}>
+                <li >{blogPosts.fields.title}</li>
+              </Link>
+            ))}
+          </ul>
+
+        </Route>
+        {blogPosts.map((blogPosts) => (
+          <Route exact path={`/recipe/${blogPosts.id}`} key={blogPosts.id}>
+            <BlogPost
+              key={blogPosts.id}
+              postData={blogPosts}
+              toggleFetch={toggleFetch}
+              setToggleFetch={setToggleFetch}
+            />
+          </Route>
+        ))}
+
+        <Route path="/newpost">
+          <Form
+            formType={"post"}
+            toggleFetch={toggleFetch}
+            setToggleFetch={setToggleFetch}
+          />
+        </Route>
       </div>
-
-      <div className="gaming-Grid">{createBoard()}</div>
-      <button>Leaderboards</button>
-      <button>How to</button>
-    </div>
+    </Router>
   );
 }
-
 
 export default App;
