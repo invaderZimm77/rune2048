@@ -2,14 +2,14 @@ import axios from "axios";
 import'./App.css';
 import { useEffect, useState } from "react";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
-import BlogPost from "./Components/BlogPost.js";
+import GamePost from "./Components/GamePost.js";
 import Form from "./Components/Form.js"
 
 
 const apiKEy= "keyzOz9iJrfKlIX63";
 
 const API_URL =
-  "https://api.airtable.com/v0/appdAL6fkiTWC0Z3m/Table%201?api_key=keyaPGQk6v48Ci0cw";
+  "https://api.airtable.com/v0/appT75kZsb3WTw7pA/Table%201?api_key=keyzOz9iJrfKlIX63";
 
 function App() {
   const [gamePosts, setGamePosts] = useState([]);
@@ -48,8 +48,8 @@ function App() {
 
         </Route>
         {gamePosts.map((gamePosts) => (
-          <Route exact path={`/recipe/${gamePosts.id}`} key={gamePosts.id}>
-            <BlogPost
+          <Route exact path={`/gamePosts/${gamePosts.id}`} key={gamePosts.id}>
+            <GamePost
               key={gamePosts.id}
               postData={gamePosts}
               toggleFetch={toggleFetch}
