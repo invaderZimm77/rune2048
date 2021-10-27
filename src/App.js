@@ -1,7 +1,7 @@
 import "./App.css";
 import axios from "axios";
 import { useState } from "react";
-import MakeGameSquare from "./Components/MakeGameSquare";
+// import GameSquare from "./Components/GameSquare";
 
 
 const bWidth = 2;
@@ -19,8 +19,8 @@ function App() {
     // console.log(bWidth*bWidth);
     for (let i = 0; i < bWidth * bWidth; i++) {
       
-      // gameSquares.push(<div className="game-Square">{i}</div>);
-      gameSquares.push(<MakeGameSquare gameSquare={gameSquareValue} />);
+      gameSquares.push(<div className="game-Square">{i}</div>);
+      // gameSquares.push(<GameSquare gameSquare={gameSquareValue} />);
       // conditional
       console.log(i);
     }
