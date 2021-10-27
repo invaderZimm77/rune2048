@@ -4,8 +4,11 @@
 }
 @font-face {
   font-family: 'Aurebesh';
-  src: URL('./Fonts/aurebesh/Aurebesh.ttf') format('truetype');
-  
+  src: url('./Fonts/aurebesh/Aurebesh.ttf') format('truetype');
+}
+@font-face{
+  font-family: 'AurebeshCalligraphy-Regular';
+  src: url('./Fonts/AurebeshCalligraphy-Regular.ttf');
 }
 @font-face {
   font-family: 'DotGothic16' ;
@@ -27,8 +30,8 @@
 body {
   padding: 30px;
   background-color: #96a2af;
-  /* font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; */
-  color: white;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; 
+  color: white;*/
   display: flex;
   justify-content: center;
 
@@ -41,8 +44,8 @@ h1,:hover {
   font-family: 'AurebeshAF-LegendsTech', sans-serif;
   font-size: 35px;
 }
-button:hover{
-  font-family:'DotGothic16', sans-serif; 
+.buttonSUB:hover{
+  font-family:'AurebeshCalligraphy', sans-serif; 
 }
 .score-Title:hover{
   font-family:'DotGothic16', sans-serif; 
@@ -55,7 +58,7 @@ h1 {
   font-family: Aurebesh;
 }
 
-.score-Title{
+:any-link {
   font-family: Aurebesh;
   font-size: 30px;
 }
@@ -102,6 +105,6 @@ hr {
   border-radius: 10px;
 }
 
-button{
+inputType {
   font-family: Aurebesh;
 }

@@ -1,5 +1,4 @@
 import axios from "axios";
-
 import { useState } from "react";
 import { Redirect, useParams } from "react-router-dom";
 
@@ -16,9 +15,9 @@ To get data pre-populated into the form for PUT requets we would
 */
 
 const Form = ({ formType, toggleFetch, setToggleFetch }) => {
-  const [title, setTitle] = useState("");
-  const [ingredients, setIngredients] = useState("");
-  const [steps, setSteps] = useState("");
+  const [playerName, setPlayerName] = useState("");
+  const [gameName, setGameName] = useState("");
+  const [score, secScore] = useState("");
   const [redirectHome, setRedirectHome] = useState(false);
   const params = useParams();
 
@@ -28,9 +27,9 @@ const Form = ({ formType, toggleFetch, setToggleFetch }) => {
       records: [
         {
           fields: {
-            title,
-            ingredients,
-            steps
+            playerName,
+            ingredients: gameName,
+            steps: score
           },
         },
       ],
@@ -51,9 +50,9 @@ const Form = ({ formType, toggleFetch, setToggleFetch }) => {
         {
           id: blog_id,
           fields: {
-            title,
-            ingredients,
-            steps
+            title: playerName,
+            ingredients: gameName,
+            steps: score
           },
         },
       ],
@@ -74,28 +73,28 @@ const Form = ({ formType, toggleFetch, setToggleFetch }) => {
       <form
         onSubmit={formType === "post" ? handlePostRequest : handlePutRequest}
       >
-        <label htmlFor="title">Title: </label>
+        <label htmlFor="title">Player's Name: </label>
         <input
           type="text"
-          id="title"
-          onChange={(ev) => setTitle(ev.target.value)}
+          id="playerName"
+          onChange={(ev) => setPlayerName(ev.target.value)}
         />
-
-        <label htmlFor="ingredients">Ingredients: </label>
+<br/>
+        <label htmlFor="gameName">Name of the Game: </label>
         <input
           type="text"
-          id="ingredients"
-          onChange={(ev) => setIngredients(ev.target.value)}
+          id="gameName"
+          onChange={(ev) => setGameName(ev.target.value)}
         />
 
-        <label htmlFor="steps"> Steps: </label>
+        <label htmlFor="score"> Score: </label>
         <input
           type="text"
-          id="steps"
-          onChange={(ev) => setSteps(ev.target.value)}
+          id="score"
+          onChange={(ev) => secScore(ev.target.value)}
         />
-
-        <input type="submit" />
+<br/>
+        <input className="buttonSUB" type="submit" />
       </form>
     </div>
   );
