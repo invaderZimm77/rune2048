@@ -6,6 +6,7 @@ const API_URL =
 const GamePost = ({ postData, toggleFetch, setToggleFetch }) => {
   const deleteGamePost = async () => {
     await axios.delete(API_URL + `&records[]=${postData.id}`);
+
     setToggleFetch(!toggleFetch);
   };
 
@@ -15,8 +16,9 @@ const GamePost = ({ postData, toggleFetch, setToggleFetch }) => {
       <p>Name of the game: {postData.fields.gameName}</p>
       <p>Game score: {postData.fields.score}</p>
       <br />
-      <Link onClick={deleteGamePost}>Delete Entry</Link>
-      <Link to={`/edit/${postData.id}`}>Edit Post</Link>
+
+      <Link onClick={deleteGamePost} className="modButton">Delete Entry</Link>
+      <Link to={`/edit/${postData.id}`} className="modButton">Edit Post</Link>
     </div>
   );
 };

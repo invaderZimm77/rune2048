@@ -25,10 +25,6 @@ body {
   justify-content: center;
 }
 
-.home-Button {
-  font-family: "DotGothic16";
-}
-
 .submit-Button {
   font-family: "DotGothic16";
   font-size: 20px;
@@ -87,15 +83,11 @@ p {
   border-width: 2px;
   border-color: var(--RosieColor);
 }
-/* .footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  /* height: 100vw; 
-  width: 100vw;
-} */
 
-.post-Links{
+.modButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font: var(--RosieColor);
 }
 
