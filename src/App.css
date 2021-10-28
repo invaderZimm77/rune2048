@@ -6,28 +6,10 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
-/* @font-face {
-  font-family: 'DotGothic16' ;
-  src: url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
-}
 
-@font-face {
-  font-family: 'Aurebesh';
-  src: url('./Fonts/aurebesh/Aurebesh.ttf') format('truetype');
-}
-
-@font-face{
-  font-family: 'AurebeshCalligraphy-Regular';
-  src: url('./Fonts/AurebeshCalligraphy-Regular.ttf');
-}
-
-@font-face {
-  font-family: 'AurebeshAF-LegendsTech';
-  src: url('./Fonts/AurebeshAF-LegendsTech.otf');
-} */
 .App {
   font-family: 'DotGothic16';
-  text-align: center;
+  /* text-align: center; */
   border: solid;
   border-style:dashed;
   border-color: var(--darkBorder);
@@ -111,4 +93,11 @@ p {
   border-style: dashed;
   border-width: 2px;
   border-color: var(--RosieColor);
+}
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100px;
+  width: 100vw;
 }

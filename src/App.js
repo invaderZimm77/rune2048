@@ -4,7 +4,8 @@ import { useEffect, useState } from "react";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import GamePost from "./Components/GamePost.js";
 import CreatPost from "./Components/CreatPost.js"
-
+import { Footer } from "./Components/Footer";
+import { Navbar } from "./Components/NavBar";
 const API_URL =
   "https://api.airtable.com/v0/appT75kZsb3WTw7pA/Table%201?api_key=keyzOz9iJrfKlIX63";
 
@@ -28,13 +29,13 @@ function App() {
   return (
     <Router>
       <div>
-        <nav>
+        {/* <nav>
           <Link to="/" className="home-Button">Home</Link>
           <br />
           <Link to="/newpost" className="add-Game">Add a Game</Link>
         </nav>
-        <br />
-
+        <br /> */}
+        <Navbar/>
         <Route exact path="/">
           <ul>
             {gamePosts.map((gamePosts) => (
@@ -63,6 +64,7 @@ function App() {
             setToggleFetch={setToggleFetch}
           />
         </Route>
+
         <Route path="/edit/:game_id">
         <CreatPost
           formType={'put'}
@@ -70,6 +72,7 @@ function App() {
           setToggleFetch={setToggleFetch}
         />
       </Route>
+      <Footer/>
       </div>
     </Router>
   );
