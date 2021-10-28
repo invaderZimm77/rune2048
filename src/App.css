@@ -3,6 +3,7 @@
   --RosieColor: #ce007f;
   --coralColor: coral;
   --darkBorder: rgb(73, 0, 80);
+  --blackAsNight: rgb(16, 43, 0);
 }
 
 @import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
@@ -87,4 +88,16 @@ p {
   font: var(--RosieColor);
 }
 
-/* importmedia q */
+@media screen and (max-width: 747px) {
+  nav{
+    /* justify-content: left; */
+    background-color: var(--darkBorder);
+    justify-content: center;
+    border-radius: 3px;
+    border-width: 2px;
+  }
+  body {
+    background-color: var(--blackAsNight);
+    color: var(--LimeColor);
+  }
+}

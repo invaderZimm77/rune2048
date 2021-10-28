@@ -17,7 +17,7 @@ const GamePost = ({ postData, toggleFetch, setToggleFetch }) => {
       <p>Game score: {postData.fields.score}</p>
       <br />
 
-      <Link onClick={deleteGamePost} className="modButton">Delete Entry</Link>
+      <Link to={`/`} onClick={deleteGamePost} className="modButton">Delete Entry</Link>
       <Link to={`/edit/${postData.id}`} className="modButton">Edit Post</Link>
     </div>
   );
