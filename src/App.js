@@ -29,13 +29,14 @@ function App() {
   return (
     <Router>
       <div>
+        <Navbar/>
         {/* <nav>
           <Link to="/" className="home-Button">Home</Link>
           <br />
           <Link to="/newpost" className="add-Game">Add a Game</Link>
         </nav>
         <br /> */}
-        <Navbar/>
+        
         <Route exact path="/">
           <ul>
             {gamePosts.map((gamePosts) => (

@@ -4,14 +4,13 @@ import React from "react";
 
 export function Navbar(props) {
   return (
-    <div>
+    <nav>
       <Link to="/" className="home-Button">
         Home
       </Link>
-      <br />
       <Link to="/newpost" className="add-Game">
         Add a Game
       </Link>
-    </div>
+    </nav>
   );
 }
