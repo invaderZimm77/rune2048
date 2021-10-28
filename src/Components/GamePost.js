@@ -15,7 +15,7 @@ const GamePost = ({ postData, toggleFetch, setToggleFetch }) => {
       <p>Name of the game: {postData.fields.gameName}</p>
       <p>Game score: {postData.fields.score}</p>
       <br />
-      <button onClick={deleteGamePost}>Delete</button>
+      <button onClick={deleteGamePost}>Delete Entry</button>
     </div>
   );
 };

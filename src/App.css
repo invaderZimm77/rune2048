@@ -14,7 +14,7 @@
   font-family: 'Aurebesh';
   src: url('./Fonts/aurebesh/Aurebesh.ttf') format('truetype');
 }
-/*
+
 @font-face{
   font-family: 'AurebeshCalligraphy-Regular';
   src: url('./Fonts/AurebeshCalligraphy-Regular.ttf');
@@ -23,7 +23,7 @@
 @font-face {
   font-family: 'AurebeshAF-LegendsTech';
   src: url('./Fonts/AurebeshAF-LegendsTech.otf');
-} */
+}
 .App {
   font-family: 'DotGothic16';
   text-align: center;
@@ -42,25 +42,8 @@ body {
   color: white;*/
   display: flex;
   justify-content: center;
-
 }
 
-
-/* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` 
-
-h1:hover {
-  font-family: 'AurebeshAF-LegendsTech', sans-serif;
-  font-size: 35px;
-}
-nav:hover {
-  font-family:'AurebeshCalligraphy', sans-serif; 
-}
-.home-Button:hover{
-  font-family:'DotGothic16', sans-serif; 
-  font-size: 30px;
-}
-
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` */
 .home-Button {
   /* text-align: left; */
   font-family: 'DotGothic16';
@@ -79,37 +62,9 @@ nav:hover {
 label {
   /* font-family: 'AurebeshCalligraphy-Regular'; */
   font-family: 'DotGothic16';
-  font-size: 30px;
+  font-size: 20px;
 }
 
-/* h1,h2,h3,
-h4,h5,p {
-  margin: 0;
-}
-
-
-hr {
-  height: 1px;
-  margin: 30px 0;
-  border: none;
-  background-color: #cacaca;
-} 
-
-.gaming-Grid {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  height: 400px;
-  width: 400px;
-  border: solid;
-  border-style:dashed;
-  border-color: var(--darkBorder);
-  border-width: 5px;
-  border-radius: 10px;
-}
-*/
 a {
 
   display: flex;
@@ -140,4 +95,14 @@ li {
 nav {
   display: flex;
   justify-content: center;
+}
+
+input {
+  background-color: var(--baseSquareColor);
+  display: flex;
+  justify-content: right;
+  border-radius: 3px;
+  border-style: dashed;
+  border-width: 2px;
+  border-color: var(--squareFontColor);
 }
