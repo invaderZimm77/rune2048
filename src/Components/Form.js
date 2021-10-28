@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Redirect, useParams } from "react-router-dom";
 
 const API_URL =
-  "https://api.airtable.com/v0/appdAL6fkiTWC0Z3m/Table%201?api_key=keyaPGQk6v48Ci0cw";
+  "https://api.airtable.com/v0/appT75kZsb3WTw7pA/Table%201?api_key=keyzOz9iJrfKlIX63";
 
 /*
 To get data pre-populated into the form for PUT requets we would
@@ -21,9 +21,11 @@ const Form = ({ formType, toggleFetch, setToggleFetch }) => {
   const [redirectHome, setRedirectHome] = useState(false);
   const params = useParams();
 
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//POST REQUEST
   const handlePostRequest = async (ev) => {
     ev.preventDefault();
-    const newBlogPost = {
+    const newGamePost = {
       records: [
         {
           fields: {
@@ -35,20 +37,21 @@ const Form = ({ formType, toggleFetch, setToggleFetch }) => {
       ],
     };
 
-    await axios.post(API_URL, newBlogPost);
+    await axios.post(API_URL, newGamePost);
 
     setRedirectHome(true);
     setToggleFetch(!toggleFetch);
   };
-
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+//PUT REQUEST
   const handlePutRequest = async (ev) => {
     ev.preventDefault();
-    const blog_id = params.blog_id;
+    const game_id = params.game_id;
 
     const updatedPostData = {
       records: [
         {
-          id: blog_id,
+          id: game_id,
           fields: {
             playerName,
             gameName,
@@ -62,24 +65,24 @@ const Form = ({ formType, toggleFetch, setToggleFetch }) => {
     setRedirectHome(true);
     setToggleFetch(!toggleFetch);
   };
-
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   if (redirectHome) {
     return <Redirect to="/" />;
   }
-
+//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   return (
     <div>
       {/* determine which type of request will happen */}
       <form
         onSubmit={formType === "post" ? handlePostRequest : handlePutRequest}
       >
-        <label htmlFor="title">Player's Name: </label>
+        <label htmlFor="playerName">Player's Name: </label>
         <input
           type="text"
           id="playerName"
           onChange={(ev) => setPlayerName(ev.target.value)}
-        />
-        <br />
+        /><br />
+
         <label htmlFor="gameName">Name of the Game: </label>
         <input
           type="text"
@@ -92,8 +95,8 @@ const Form = ({ formType, toggleFetch, setToggleFetch }) => {
           type="text"
           id="score"
           onChange={(ev) => secScore(ev.target.value)}
-        />
-        <br />
+        /><br />
+
         <input className="submit-Button" type="submit" />
       </form>
     </div>

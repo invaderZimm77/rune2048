@@ -1,7 +1,8 @@
 :root{
- --baseSquareColor: #2d1e32;
+ --baseSquareColor: #c6ffc6;
  --squareFontColor: #ce007f;
- 
+ --coralColor:  coral;
+ --darkBorder: rgb(73, 0, 80);
 }
 
 @font-face {
@@ -28,7 +29,7 @@
   text-align: center;
   border: solid;
   border-style:dashed;
-  border-color: coral;
+  border-color: var(--darkBorder);
   border-width: 2px;
   border-radius: 10px;
 }
@@ -61,8 +62,9 @@ nav:hover {
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~` */
 .home-Button {
-  text-align: left;
+  /* text-align: left; */
   font-family: 'DotGothic16';
+  /* font-family: 'AurebeshCalligraphy-Regular'; */
   /* font-family: Aurebesh; */
 }
 
@@ -70,6 +72,7 @@ nav:hover {
   /* font-family: 'AurebeshCalligraphy-Regular'; */
   font-family: 'DotGothic16';
   font-size: 30px;
+  border-radius: 4px;
 }
 
 
@@ -90,23 +93,23 @@ hr {
   margin: 30px 0;
   border: none;
   background-color: #cacaca;
-} */
+} 
 
 .gaming-Grid {
   display: flex;
   flex-wrap: wrap;
-  /* flex-direction: row; */
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 400px;
   width: 400px;
   border: solid;
   border-style:dashed;
-  border-color: rgb(73, 0, 80);
-  border-width: 3px;
+  border-color: var(--darkBorder);
+  border-width: 5px;
   border-radius: 10px;
 }
-
+*/
 a {
 
   display: flex;
@@ -116,10 +119,11 @@ a {
   /* font-family: Aurebesh; */
   font-family: 'DotGothic16';
   font-size: 25px;
-  padding: auto;
+  padding: 3px;
+  margin: 2px;
   border: solid;
   border-style:dashed;
-  border-color: coral;
+  border-color:var(--darkBorder);
   border-width: 2px;
   border-radius: 10px;
 }
@@ -131,4 +135,9 @@ li {
   background-color: var(--baseSquareColor);
   /* font-family: Aurebesh; */
   font-family: 'DotGothic16';
+}
+
+nav {
+  display: flex;
+  justify-content: center;
 }

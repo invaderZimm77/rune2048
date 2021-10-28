@@ -38,7 +38,7 @@ function App() {
           <ul>
             {gamePosts.map((gamePosts) => (
               <Link to={`/gamePosts/${gamePosts.id}`} key={gamePosts.id}>
-                <li >{gamePosts.fields.PlayerName}</li>
+                <li >{gamePosts.fields.playerName}</li>
               </Link>
             ))}
           </ul>
