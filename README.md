@@ -2,7 +2,7 @@
 
 ## Project Name
 
-The name of your project.
+Game Central game Tracker
 
 ## Project Description
 

@@ -6,6 +6,7 @@ import GamePost from "./Components/GamePost.js";
 import CreatPost from "./Components/CreatPost.js"
 import { Footer } from "./Components/Footer";
 import { Navbar } from "./Components/NavBar";
+import { Header } from "./Components/Header";
 const API_URL =
   "https://api.airtable.com/v0/appT75kZsb3WTw7pA/Table%201?api_key=keyzOz9iJrfKlIX63";
 
@@ -28,6 +29,7 @@ function App() {
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   return (
     <Router>
+      <Header/>
       <div>
         <Navbar/>
         {/* <nav>
