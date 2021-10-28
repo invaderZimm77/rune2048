@@ -1,9 +1,9 @@
 import axios from "axios";
-import'./App.css';
+import "./App.css";
 import { useEffect, useState } from "react";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import GamePost from "./Components/GamePost.js";
-import CreatPost from "./Components/CreatPost.js"
+import CreatPost from "./Components/CreatPost.js";
 import { Footer } from "./Components/Footer";
 import { Navbar } from "./Components/NavBar";
 import { Header } from "./Components/Header";
@@ -26,28 +26,21 @@ function App() {
 
     getGamePosts();
   }, [toggleFetch]);
-    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+  //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
   return (
     <Router>
-      <Header/>
+      <Header />
       <div>
-        <Navbar/>
-        {/* <nav>
-          <Link to="/" className="home-Button">Home</Link>
-          <br />
-          <Link to="/newpost" className="add-Game">Add a Game</Link>
-        </nav>
-        <br /> */}
-        
+        <Navbar />
         <Route exact path="/">
+          <h3>Player's Post</h3>
           <ul>
             {gamePosts.map((gamePosts) => (
-              <Link to={`/gamePosts/${gamePosts.id}`} key={gamePosts.id}>
-                <li >{gamePosts.fields.playerName}</li>
+              <Link to={`/gamePosts/${gamePosts.id}`} key={gamePosts.id}className="post-Links">
+                <li>{gamePosts.fields.playerName}</li>
               </Link>
             ))}
           </ul>
-
         </Route>
         {gamePosts.map((gamePosts) => (
           <Route exact path={`/gamePosts/${gamePosts.id}`} key={gamePosts.id}>
@@ -69,13 +62,13 @@ function App() {
         </Route>
 
         <Route path="/edit/:game_id">
-        <CreatPost
-          formType={'put'}
-          toggleFetch={toggleFetch}
-          setToggleFetch={setToggleFetch}
-        />
-      </Route>
-      <Footer/>
+          <CreatPost
+            formType={"put"}
+            toggleFetch={toggleFetch}
+            setToggleFetch={setToggleFetch}
+          />
+        </Route>
+        <Footer />
       </div>
     </Router>
   );

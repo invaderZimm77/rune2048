@@ -1,17 +1,17 @@
-:root{
- --LimeColor: #c6ffc6;
- --RosieColor: #ce007f;
- --coralColor:  coral;
- --darkBorder: rgb(73, 0, 80);
+:root {
+  --LimeColor: #c6ffc6;
+  --RosieColor: #ce007f;
+  --coralColor: coral;
+  --darkBorder: rgb(73, 0, 80);
 }
 
-@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DotGothic16&display=swap");
 
 .App {
-  font-family: 'DotGothic16';
+  font-family: "DotGothic16";
   /* text-align: center; */
   border: solid;
-  border-style:dashed;
+  border-style: dashed;
   border-color: var(--darkBorder);
   border-width: 2px;
   border-radius: 10px;
@@ -20,43 +20,37 @@
 body {
   padding: 20px;
   background-color: #96a2af;
-  font-family: 'DotGothic16';
+  font-family: "DotGothic16";
   display: flex;
   justify-content: center;
 }
 
 .home-Button {
-  font-family: 'DotGothic16';
+  font-family: "DotGothic16";
 }
 
-.submit-Button{
-
-  font-family: 'DotGothic16';
-  font-size: 30px;
+.submit-Button {
+  font-family: "DotGothic16";
+  font-size: 20px;
   border-radius: 4px;
 }
 
-
 label {
-
-  font-family: 'DotGothic16';
+  font-family: "DotGothic16";
   font-size: 20px;
 }
 
 a {
-
   display: flex;
   justify-content: center;
-  align-items: center;
   background-color: var(--LimeColor);
-  /* font-family: Aurebesh; */
-  font-family: 'DotGothic16';
+  font-family: "DotGothic16";
   font-size: 25px;
   padding: 3px;
   margin: 2px;
   border: solid;
-  border-style:dashed;
-  border-color:var(--darkBorder);
+  border-style: dashed;
+  border-color: var(--darkBorder);
   border-width: 2px;
   border-radius: 10px;
 }
@@ -66,8 +60,7 @@ li {
   justify-content: center;
   align-items: center;
   background-color: var(--LimeColor);
-  /* font-family: Aurebesh; */
-  font-family: 'DotGothic16';
+  font-family: "DotGothic16";
 }
 
 nav {
@@ -78,7 +71,7 @@ nav {
 input {
   background-color: var(--LimeColor);
   display: flex;
-  justify-content: right;
+  justify-content: center;
   border-radius: 3px;
   border-style: dashed;
   border-width: 2px;
@@ -94,10 +87,16 @@ p {
   border-width: 2px;
   border-color: var(--RosieColor);
 }
-footer{
+/* .footer {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 100px;
+  /* height: 100vw; 
   width: 100vw;
+} */
+
+.post-Links{
+  font: var(--RosieColor);
 }
+
+/* importmedia q */
