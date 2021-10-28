@@ -3,7 +3,7 @@ import'./App.css';
 import { useEffect, useState } from "react";
 import { Route, Link, BrowserRouter as Router } from "react-router-dom";
 import GamePost from "./Components/GamePost.js";
-import Form from "./Components/Form.js"
+import CreatPost from "./Components/CreatPost.js"
 
 const API_URL =
   "https://api.airtable.com/v0/appT75kZsb3WTw7pA/Table%201?api_key=keyzOz9iJrfKlIX63";
@@ -15,6 +15,7 @@ function App() {
   useEffect(() => {
     console.log("Retreving Server Data...");
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    //GET REQUEST
     const getGamePosts = async () => {
       const gameP = await axios.get(API_URL);
       console.log(gameP.data);
@@ -56,12 +57,19 @@ function App() {
         ))}
 
         <Route path="/newpost">
-          <Form
+          <CreatPost
             formType={"post"}
             toggleFetch={toggleFetch}
             setToggleFetch={setToggleFetch}
           />
         </Route>
+        <Route path="/edit/:game_id">
+        <CreatPost
+          formType={'put'}
+          toggleFetch={toggleFetch}
+          setToggleFetch={setToggleFetch}
+        />
+      </Route>
       </div>
     </Router>
   );

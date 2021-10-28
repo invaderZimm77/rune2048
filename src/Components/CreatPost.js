@@ -1,11 +1,12 @@
 import axios from "axios";
 import { useState } from "react";
 import { Redirect, useParams } from "react-router-dom";
-// import HandlePostRequest from "./HandlePostRequest";
+import { Link } from "react-router-dom";
+
 const API_URL =
   "https://api.airtable.com/v0/appT75kZsb3WTw7pA/Table%201?api_key=keyzOz9iJrfKlIX63";
 
-const Form = ({ formType, toggleFetch, setToggleFetch }) => {
+const CreatPost = ({ formType, toggleFetch, setToggleFetch }) => {
   const [playerName, setPlayerName] = useState("");
   const [gameName, setGameName] = useState("");
   const [score, secScore] = useState("");
@@ -94,4 +95,4 @@ const Form = ({ formType, toggleFetch, setToggleFetch }) => {
   );
 };
 
-export default Form;
+export default CreatPost;
