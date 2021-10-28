@@ -5,15 +5,6 @@ import { Redirect, useParams } from "react-router-dom";
 const API_URL =
   "https://api.airtable.com/v0/appT75kZsb3WTw7pA/Table%201?api_key=keyzOz9iJrfKlIX63";
 
-/*
-To get data pre-populated into the form for PUT requets we would
-    need to write another GET request and filter using the id from
-    the url. Not the easiest workaround but the simplest way we 
-    could accomplish this given the Airtable API.
-    1. Get all blog post data from Airtable
-    2. blog data .find matching our param to the full set.
-*/
-
 const Form = ({ formType, toggleFetch, setToggleFetch }) => {
   const [playerName, setPlayerName] = useState("");
   const [gameName, setGameName] = useState("");

@@ -38,21 +38,16 @@ body {
   padding: 30px;
   background-color: #96a2af;
   font-family: 'DotGothic16';
-  /* font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", sans-serif; 
-  color: white;*/
   display: flex;
   justify-content: center;
 }
 
 .home-Button {
-  /* text-align: left; */
   font-family: 'DotGothic16';
-  /* font-family: 'AurebeshCalligraphy-Regular'; */
-  /* font-family: Aurebesh; */
 }
 
 .submit-Button{
-  /* font-family: 'AurebeshCalligraphy-Regular'; */
+
   font-family: 'DotGothic16';
   font-size: 30px;
   border-radius: 4px;
@@ -60,7 +55,7 @@ body {
 
 
 label {
-  /* font-family: 'AurebeshCalligraphy-Regular'; */
+
   font-family: 'DotGothic16';
   font-size: 20px;
 }

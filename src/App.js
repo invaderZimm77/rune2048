@@ -14,13 +14,13 @@ function App() {
 
   useEffect(() => {
     console.log("Retreving Server Data...");
-
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     const getGamePosts = async () => {
       const gameP = await axios.get(API_URL);
       console.log(gameP.data);
       setGamePosts(gameP.data.records);
     };
-
+    //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     getGamePosts();
   }, [toggleFetch]);
 
@@ -30,7 +30,7 @@ function App() {
         <nav>
           <Link to="/" className="home-Button">Home</Link>
           <br />
-          <Link to="/newpost">Add a Game</Link>
+          <Link to="/newpost" className="add-Game">Add a Game</Link>
         </nav>
         <br />
 
