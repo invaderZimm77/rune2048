@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { Redirect, useParams } from "react-router-dom";
-
+// import HandlePostRequest from "./HandlePostRequest";
 const API_URL =
   "https://api.airtable.com/v0/appT75kZsb3WTw7pA/Table%201?api_key=keyzOz9iJrfKlIX63";
 
@@ -14,7 +14,7 @@ const Form = ({ formType, toggleFetch, setToggleFetch }) => {
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //POST REQUEST
-  const handlePostRequest = async (ev) => {
+  const HandlePostRequest = async (ev) => {
     ev.preventDefault();
     const newGamePost = {
       records: [
@@ -35,7 +35,7 @@ const Form = ({ formType, toggleFetch, setToggleFetch }) => {
   };
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 //PUT REQUEST
-  const handlePutRequest = async (ev) => {
+  const HandlePutRequest = async (ev) => {
     ev.preventDefault();
     const game_id = params.game_id;
 
@@ -65,7 +65,7 @@ const Form = ({ formType, toggleFetch, setToggleFetch }) => {
     <div>
       {/* determine which type of request will happen */}
       <form
-        onSubmit={formType === "post" ? handlePostRequest : handlePutRequest}
+        onSubmit={formType === "post" ? HandlePostRequest : HandlePutRequest}
       >
         <label htmlFor="playerName">Player's Name: </label>
         <input

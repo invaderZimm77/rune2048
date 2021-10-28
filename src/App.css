@@ -1,11 +1,12 @@
 :root{
- --baseSquareColor: #c6ffc6;
- --squareFontColor: #ce007f;
+ --LimeColor: #c6ffc6;
+ --RosieColor: #ce007f;
  --coralColor:  coral;
  --darkBorder: rgb(73, 0, 80);
 }
 
-@font-face {
+@import url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
+/* @font-face {
   font-family: 'DotGothic16' ;
   src: url('https://fonts.googleapis.com/css2?family=DotGothic16&display=swap');
 }
@@ -23,7 +24,7 @@
 @font-face {
   font-family: 'AurebeshAF-LegendsTech';
   src: url('./Fonts/AurebeshAF-LegendsTech.otf');
-}
+} */
 .App {
   font-family: 'DotGothic16';
   text-align: center;
@@ -65,7 +66,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--baseSquareColor);
+  background-color: var(--LimeColor);
   /* font-family: Aurebesh; */
   font-family: 'DotGothic16';
   font-size: 25px;
@@ -82,7 +83,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--baseSquareColor);
+  background-color: var(--LimeColor);
   /* font-family: Aurebesh; */
   font-family: 'DotGothic16';
 }
@@ -93,11 +94,21 @@ nav {
 }
 
 input {
-  background-color: var(--baseSquareColor);
+  background-color: var(--LimeColor);
   display: flex;
   justify-content: right;
   border-radius: 3px;
   border-style: dashed;
   border-width: 2px;
-  border-color: var(--squareFontColor);
+  border-color: var(--RosieColor);
+}
+
+p {
+  background-color: var(--LimeColor);
+  display: flex;
+  justify-content: center;
+  border-radius: 3px;
+  border-style: dashed;
+  border-width: 2px;
+  border-color: var(--RosieColor);
 }
