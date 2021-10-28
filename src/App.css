@@ -9,7 +9,6 @@
 
 .App {
   font-family: "DotGothic16";
-  /* text-align: center; */
   border: solid;
   border-style: dashed;
   border-color: var(--darkBorder);
@@ -26,13 +25,12 @@ body {
 }
 
 .submit-Button {
-  font-family: "DotGothic16";
+  /* font-family: "DotGothic16"; */
   font-size: 20px;
   border-radius: 4px;
 }
 
 label {
-  font-family: "DotGothic16";
   font-size: 20px;
 }
 
@@ -40,7 +38,6 @@ a {
   display: flex;
   justify-content: center;
   background-color: var(--LimeColor);
-  font-family: "DotGothic16";
   font-size: 25px;
   padding: 3px;
   margin: 2px;
@@ -56,7 +53,6 @@ li {
   justify-content: center;
   align-items: center;
   background-color: var(--LimeColor);
-  font-family: "DotGothic16";
 }
 
 nav {
@@ -84,7 +80,7 @@ p {
   border-color: var(--RosieColor);
 }
 
-.modButton{
+.modButton {
   display: flex;
   justify-content: center;
   align-items: center;

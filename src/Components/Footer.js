@@ -5,7 +5,7 @@ export function Footer(props) {
 
 	return (
 		<div className="footer">
-		Footer
+		Creatred for General Assembly
 		</div>
 	)
 }
