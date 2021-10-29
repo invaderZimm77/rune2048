@@ -47,26 +47,23 @@ The functionality will then be divided into two separate lists: MVP and PostMVP.
 #### MVP
  
 - Gets all the post from the API and maps the usernames as links on the home page
-- the usernameLinks take you to the individual post
+- The usernameLinks take you to the individual post
+- Add new entries to the api
  
 #### PostMVP 
-- add delete button
-- add tic-tac-toe game
-- add grouping for multiple entries for the same username
+- Add delete button
+- Add tic-tac-toe game
+- Add grouping for multiple entries for the same username
  
 ## Project Schedule
  
-This schedule will be used to keep track of your progress throughout the week and align with our expectations. Here's an example.
- 
-|  Day | Deliverable | Status
-|---|---| ---|
-|July 10-12| Prompt / Wireframes / Priority Matrix / Timeframes | Incomplete
-|July 13| Project Approval | Incomplete
-|July 13| Core Application Structure (HTML, CSS, etc.) | Incomplete
-|July 14| Pseudocode / actual code | Incomplete
-|July 15| Initial Clickable Model  | Incomplete
-|July 16| MVP | Incomplete
-|July 17| Presentations | Incomplete
+| Project Important Dates   | Day      | Date  |
+|---------------------------|---       |---    |
+| Project Prompt Delivered  |  Friday  | 10/22 |
+| Project Pitches           |  Friday  | 10/22 |
+| Project Deployment        |  Tuesday | 10/26 |
+| Project Presentations     |  Friday  | 10/29 |
+| Outcomes Alumni Panel     |  Friday  | 10/29 |
  
 ## Timeframes
 I overestimate my abilities and halfway through the project had do stop what I was doing and completely pivot to make sure I could turn in a MVP
@@ -83,13 +80,13 @@ I overestimate my abilities and halfway through the project had do stop what I w
 ## SWOT Analysis
  
 ### Strengths:
-utilizing resources and asking for help when i realized that I was in over my head
+Utilizing resources and asking for help when I realized that I was in over my head
  
 ### Weaknesses:
 I'm struggling with the syntxing and functionality of react components but know that it will click
  
 ### Opportunities:
-As the way i started this project, I won't ever stop pushing myself, but hopefully tho nextime with the correct amount of zeel
+As the way I started this project, I won't ever stop pushing myself, but hopefully tho nextime with the correct amount of zeel
  
 ### Threats:
 hubris
