@@ -4,6 +4,11 @@
  
 Game Central game Tracker
  
+
+ ### Project link
+ https://fervent-goldwasser-fdbc5a.netlify.app/
+
+ 
 ## Project Description
 App allows the tracking of game scores.  Listing post entries by username that once clicked will display that sole post to the user. The Mobile Layout Will have a more dark mode esc color pallet while the desktop will be light. Users will also be able to delete and add entries.
  

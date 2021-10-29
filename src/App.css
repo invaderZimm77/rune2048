@@ -50,7 +50,12 @@ a {
   border-radius: 10px;
 }
 
+ul{
+  padding-left: 0px;
+}
+
 li {
+ 
   display: flex;
   justify-content: center;
   align-items: center;
