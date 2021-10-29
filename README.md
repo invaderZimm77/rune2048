@@ -71,7 +71,7 @@ I overestimate my abilities and halfway through the project had do stop what I w
 | Component | Priority | Estimated Time | Time Invested | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
 | header/footer | H | 1hr | 45min | 45min |
-| nav bar | H | 30 min | 15 min | 20min|
+| navbar | H | 30 min | 15 min | 20min|
 | gamePost | H | 1hr | 1hr | 1hr |
 | Adding Form | H | 3hrs| 10hrs | 20hrs |
 | Working with API | H | 2hrs| 2.5hrs | 2.5hrs |
