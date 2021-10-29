@@ -54,6 +54,7 @@ The functionality will then be divided into two separate lists: MVP and PostMVP.
 - Add delete button
 - Add tic-tac-toe game
 - Add grouping for multiple entries for the same username
+- Add 2048
  
 ## Project Schedule
  

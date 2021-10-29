@@ -17,12 +17,12 @@ function App() {
   const [toggleFetch, setToggleFetch] = useState(true);
 
   useEffect(() => {
-    console.log("Retreving Server Data...");
+    // console.log("Retreving Server Data...");
     //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     //GET REQUEST
     const getGamePosts = async () => {
       const gameP = await axios.get(API_URL);
-      console.log(gameP.data);
+      // console.log(gameP.data);
       setGamePosts(gameP.data.records);
     };
 
