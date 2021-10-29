@@ -5,9 +5,7 @@
 Game Central game Tracker
 
 ## Project Description
-
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and/or functionality.
-
+App allows the tracking of game scores and by listing 
 ## Wireframes
 
 Upload images of your wireframes to an image hosting site or add them to an assets folder in your repo and link them here with a description of each specific wireframe.
@@ -52,14 +50,14 @@ The functionality will then be divided into two separate lists: MVP and PostMVP.
 #### MVP 
 *These are examples only. Replace with your own MVP features.*
 
-- Find and use external api 
-- Render data on page 
-- Allow user to choose favorites 
+- 
+- 
+- 
 
 #### PostMVP  
 
 - add tic-tac-toe game
-- Use local storage to save user favorites
+- 
 
 ## Project Schedule
 
